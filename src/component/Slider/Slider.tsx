@@ -4,6 +4,7 @@ import './Slider.scss';
 
 interface SliderProps {
   item: SectionType;
+  width: number;
 }
 
 interface SectionType {
@@ -39,9 +40,9 @@ const getArrayToIndex = (array: RestaurantType[], index: number) => {
   return arrayFinal;
 };
 
-export const Slider: React.FC<SliderProps> = ({ item }) => {
+export const Slider: React.FC<SliderProps> = ({ item, width }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
+
   const [state, setState] = useState({
     activeIndex: 0,
     translate: 0,
@@ -91,32 +92,15 @@ export const Slider: React.FC<SliderProps> = ({ item }) => {
     };
   }, [state.activeIndex]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (ref.current) {
-        const cardWidth =
-          ref.current.offsetWidth / 3 - 20 > 270
-            ? ref.current.offsetWidth / 3 - 20
-            : 270;
-        setWidth(cardWidth);
-      }
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [ref.current]);
-
   return (
-    <div ref={ref}>
+    <>
       <div className="header-container">
         <h2 className="header-container__title">{item.title}</h2>
         <div className="header-container__button">
-          <button className="button" onClick={PrevSlide}>
+          <button className="button left" onClick={PrevSlide}>
             {'<'}
           </button>
-          <button className="button" onClick={NextSlide}>
+          <button className="button right" onClick={NextSlide}>
             {'>'}
           </button>
         </div>
@@ -138,6 +122,6 @@ export const Slider: React.FC<SliderProps> = ({ item }) => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };

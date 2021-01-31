@@ -15,3 +15,7 @@ In the project directory, you can run:
 3. Run local server ( http://localhost:3000/ ) with the command
 
 ### `yarn start`
+
+4. Run e2e test
+
+### `yarn run test:e2e`

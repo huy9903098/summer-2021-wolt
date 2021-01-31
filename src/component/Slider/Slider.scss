@@ -55,4 +55,12 @@ $light-blue: #5dade2;
   &:hover {
     color: $light-blue;
   }
+
+  &.left {
+    border-radius: 8px 0 0 8px;
+  }
+
+  &.right {
+    border-radius: 0 8px 8px 0;
+  }
 }
