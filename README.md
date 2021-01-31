@@ -1,6 +1,7 @@
 # Wolt Summer 2021 Internship assignment
 
 Assignment description: [Wolt Assignment](https://github.com/woltapp/summer2021-internship).
+Assignment link: [link](https://summer2021wolt.herokuapp.com/).
 
 ## Run the project locally
 
