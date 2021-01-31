@@ -1,0 +1,58 @@
+$font-color: #202125;
+$light-blue: #5dade2;
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  &__card-item {
+    margin-right: 20px;
+  }
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 8px 0;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    font-family: 'AvertaStdPE-Semibold';
+    font-size: 2rem;
+    font-weight: 700;
+    color: $font-color;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.button {
+  outline: none;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  border: 1px solid #d2d3d3;
+  background: transparent;
+  font-size: 1.5rem;
+  color: $font-color;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  &:hover {
+    color: $light-blue;
+  }
+}
