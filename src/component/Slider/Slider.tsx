@@ -84,6 +84,7 @@ export const Slider: React.FC<SliderProps> = ({ item }) => {
         cardarray: getArrayToIndex(item.restaurants, state.activeIndex),
       });
     };
+
     window.addEventListener('transitionend', changeArray);
     return () => {
       window.removeEventListener('transitionend', changeArray);
