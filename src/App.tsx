@@ -10,9 +10,9 @@ const App: React.FC = () => {
     const handleResize = () => {
       if (ref.current) {
         const cardWidth =
-          ref.current.offsetWidth / 3 - 20 > 270
+          ref.current.offsetWidth / 3 - 20 > 320
             ? ref.current.offsetWidth / 3 - 20
-            : 270;
+            : 320;
         setWidth(cardWidth);
       }
     };
