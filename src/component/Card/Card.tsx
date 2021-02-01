@@ -20,7 +20,6 @@ export const Card: React.FC<CardProps> = ({ restaurant, width }) => {
       <div
         className="restaurant-card__image"
         style={{
-          width: width,
           height: width * (9 / 16),
         }}
       >
