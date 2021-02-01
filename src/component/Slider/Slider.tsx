@@ -95,7 +95,9 @@ export const Slider: React.FC<SliderProps> = ({ item, width }) => {
   return (
     <>
       <div className="header-container">
-        <h2 className="header-container__title">{item.title}</h2>
+        <h2 className="header-container__title">
+          {item.title} {` (${item.restaurants.length})`}
+        </h2>
         <div className="header-container__button">
           <button className="button left" onClick={PrevSlide}>
             {'<'}
