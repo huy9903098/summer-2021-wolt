@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from '../Card/Card';
 import './Slider.scss';
 
@@ -20,7 +20,7 @@ export interface RestaurantType {
   online: boolean;
   popularity: number;
 }
-
+// generate new array for slider
 const getArrayToIndex = (array: RestaurantType[], index: number) => {
   let arrayFinal = [] as RestaurantType[];
 
@@ -41,8 +41,6 @@ const getArrayToIndex = (array: RestaurantType[], index: number) => {
 };
 
 export const Slider: React.FC<SliderProps> = ({ item, width }) => {
-  const ref = useRef<HTMLDivElement>(null);
-
   const [state, setState] = useState({
     activeIndex: 0,
     translate: 0,
